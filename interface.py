@@ -82,4 +82,6 @@ else:
             st.markdown(f"<div style='text-align: left; background-color: #F1F0F0; padding: 10px; border-radius: 10px; margin: 5px 0; color: #333;'><b>👩‍⚕️ Helena:</b> {resposta_formatada}</div>", unsafe_allow_html=True)
 
     st.markdown("---")
-    st.caption("Desenvolvido com ❤️ por Zion Tech Solutions")
+    st.caption("Desenvolvido com ❤️ por Zion Tech Solutions") 
+    st.caption("Suporte: contato@zionstudiodigital.com.br")
+    
