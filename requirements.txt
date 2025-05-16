@@ -1,0 +1,11 @@
+langchain==0.1.14
+langchain-core==0.1.53
+langchain-community==0.0.35
+openai
+python-dotenv
+streamlit
+streamlit-chat
+streamlit-ace
+tornado
+langchain-openai
+gTTS
