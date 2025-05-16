@@ -14,6 +14,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
     raise EnvironmentError("❌ OPENAI_API_KEY não encontrada no .env")
+print("🔍 DEBUG: OPENAI_API_KEY =", os.getenv("OPENAI_API_KEY"))
 
 # Instancia o modelo de linguagem (GPT-4o)
 llm = ChatOpenAI(
