@@ -9,3 +9,7 @@ streamlit-ace
 tornado
 langchain-openai
 gTTS
+langchain-chroma
+langchain
+langchain-openai
+chromadb
