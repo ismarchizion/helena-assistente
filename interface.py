@@ -1,22 +1,6 @@
 import streamlit as st
 from main import responder_usuario
 from PIL import Image
-import pyttsx3
-
-# === Função para leitura em voz local ===
-def falar_helena(resposta: str):
-    engine = pyttsx3.init()
-    engine.setProperty('rate', 170)
-    engine.setProperty('volume', 1.0)
-
-    voices = engine.getProperty('voices')
-    for voice in voices:
-        if "brazil" in voice.name.lower() or "português" in voice.name.lower():
-            engine.setProperty('voice', voice.id)
-            break
-
-    engine.say(resposta)
-    engine.runAndWait()
 
 # === Detecta emoções sensíveis ===
 def detectar_emocao(texto):
@@ -96,10 +80,6 @@ else:
         else:
             resposta_formatada = aplicar_icone(msg)
             st.markdown(f"<div style='text-align: left; background-color: #F1F0F0; padding: 10px; border-radius: 10px; margin: 5px 0; color: #333;'><b>👩‍⚕️ Helena:</b> {resposta_formatada}</div>", unsafe_allow_html=True)
-
-    if st.session_state.ultima_resposta:
-        if st.button("🎧 Ouvir resposta da Helena"):
-            falar_helena(st.session_state.ultima_resposta)
 
     st.markdown("---")
     st.caption("Desenvolvido com ❤️ por Zion Tech Solutions")
